@@ -8,9 +8,9 @@ import Day2 from './view/day2'
 import Day3 from './view/day3'
 
 const days = [
-  { key:1, route: 'Day1', title:"Day1: A stopwatch", component:Day1 },
-  { key:2, route: 'Day2', title:"Day2: A weather app", component:Day2 },
-  { key:3, route: 'Day3', title:"Day3: Twitter", component:Day3 },
+  { key:'1', route: 'Day1', title:"Day1: A stopwatch", component:Day1 },
+  { key:'2', route: 'Day2', title:"Day2: A weather app", component:Day2 },
+  { key:'3', route: 'Day3', title:"Day3: Twitter", component:Day3 },
 ]
 
 const Stack = createStackNavigator();
