@@ -180,15 +180,15 @@ function Day1() {
         ])
     }
 
-    useEffect(()=>{
-        _stopWatch()
-        _clearRecord()
-    }, [])
-
     useEffect(() => {
-        const app = () => {(Platform.OS === "ios") && StatusBar.setBarStyle(0);};
-        app();
-    }, []);
+        // componentDidMount
+        (Platform.OS === "ios") && StatusBar.setBarStyle(0)
+        return () => {
+            // componentWillUnmount
+             _stopWatch()
+             _clearRecord()
+        }
+    },[])
 
     return (
       <View style={styles.watchContainer}>
