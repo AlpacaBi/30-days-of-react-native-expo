@@ -34,6 +34,8 @@ const useStopWatch = () => {
   const [initialTime, setInitialTime] = useState(0)
   const [timeAccumulation , setTimeAccumulation] = useState(0)
   const [record, setRecord] = useState([/*{title:"",time:""}*/])
+  const [recordCounter, setRecordCounter] = useState(0)
+  const [recordTime, setRecordTime] = useState(0)
 
   const format = time => {
     let minute = Math.floor(time / (60 * 1000));
@@ -47,15 +49,9 @@ const useStopWatch = () => {
     return format(timeAccumulation + currentTime - initialTime)
   }, [currentTime])
 
-
-  const resetWatch= () => {
-    console.log("resetTimer")
-    setIsRunning(false);
-    setCurrentTime(0);
-    setInitialTime(0);
-    setTimeAccumulation(0)
-    setRecord([])
-  };
+  const sectionTime = useMemo(()=>{
+    return format(timeAccumulation + currentTime - initialTime - recordTime)
+  }, [currentTime])
 
   const startWatch  = () => {
     setInitialTime((new Date()).getTime());
@@ -67,16 +63,32 @@ const useStopWatch = () => {
     setTimeAccumulation(timeAccumulation + currentTime - initialTime) 
   }
 
+  const resetWatch= () => {
+    setIsRunning(false);
+    setCurrentTime(0);
+    setInitialTime(0);
+    setTimeAccumulation(0)
+    setRecordCounter(0)
+    setRecord([])
+    setRecordTime(0)
+  };
+
   const addRecord = () => {
-    setRecord([
-      ...record,
-      {title:"计次1",time: "ssss"}
-    ])
+    setRecordCounter(val => val + 1);
+    let recordCopy = [...record];
+    (recordCounter > 8) &&recordCopy.pop();
+    recordCopy.unshift({
+      title: "计次"+(recordCounter +1 ),
+      time: sectionTime
+    });
+    setRecord(recordCopy)
+    setRecordTime(timeAccumulation + currentTime - initialTime)
   }
 
   return {
     isRunning,
     totalTime,
+    sectionTime,
     startWatch,
     stopWatch,
     resetWatch,

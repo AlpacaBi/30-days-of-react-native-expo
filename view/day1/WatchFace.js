@@ -5,7 +5,7 @@ import Util from '../utils';
 function WatchFace({sectionTime, totalTime}) {
     return(
         <View style={styles.watchFaceContainer}>
-            {/* <Text style={styles.sectionTime}>{sectionTime}</Text> */}
+            <Text style={styles.sectionTime}>{sectionTime}</Text>
             <Text style={styles.totalTime}>{totalTime}</Text>
         </View>
     )

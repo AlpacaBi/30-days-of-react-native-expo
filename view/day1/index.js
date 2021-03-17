@@ -11,6 +11,7 @@ function Day1() {
 
     const {
         totalTime,
+        sectionTime,
         isRunning,
         startWatch ,
         stopWatch,
@@ -30,7 +31,7 @@ function Day1() {
 
     return (
         <View style={styles.watchContainer}>
-            <WatchFace totalTime={totalTime}></WatchFace>
+            <WatchFace totalTime={totalTime} sectionTime={sectionTime}></WatchFace>
             <WatchControl 
                 isRunning = {isRunning}
                 startWatch={startWatch} 
@@ -50,6 +51,5 @@ const styles = StyleSheet.create({
         marginTop: 60,
     }
 });
-
 
 export default Day1
