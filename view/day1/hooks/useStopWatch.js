@@ -92,7 +92,6 @@ const useStopWatch = () => {
     startWatch,
     stopWatch,
     resetWatch,
-    addRecord,
     record,
     addRecord
   };
