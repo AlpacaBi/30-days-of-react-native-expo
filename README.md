@@ -38,3 +38,6 @@ If you think the project has helped you, you can buy a cup of coffee for the aut
 ```bash
 deno run https://deno.land/x/qrcode_terminal/support/buy-me-a-cup-of-coffee.js
 ```
+
+## 🔑License
+[Do What The Fuck You Want To Public License](./LICENSE)
