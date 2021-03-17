@@ -19,7 +19,7 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home">
+        <Stack.Screen name="Home" options={{title: "30 Days of RN"}}>
           {props => <Home {...props} days={days} />}
         </Stack.Screen>
         {days.map(item => (
