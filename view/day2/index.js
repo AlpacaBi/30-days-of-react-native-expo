@@ -4,7 +4,7 @@ import { StatusBar, View } from 'react-native';
 import Weather from './Weather'
 
 
-function Day2(navigation) {
+function Day2({ navigation }) {
     const back = () => {
         navigation.pop();
         StatusBar.setBarStyle(0);
