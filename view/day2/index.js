@@ -1,10 +1,18 @@
-import React from 'react'
-import { Button, Text, View } from 'react-native';
+import React from 'react';
+import { StatusBar, View } from 'react-native';
 
-function Day2() {
-    return (
-        <View>
-            <Text>Day2</Text>
+import Weather from './Weather'
+
+
+function Day2(navigation) {
+    const back = () => {
+        navigation.pop();
+        StatusBar.setBarStyle(0);
+    }
+    
+    return(
+        <View style={{flex:1}}>
+            <Weather back={back}></Weather>
         </View>
     )
 }
