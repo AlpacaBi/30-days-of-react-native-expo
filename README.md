@@ -8,9 +8,13 @@ This project is inspired by [30 days of React Native](https://github.com/fangwei
 ## 🔎Installation
 Require node.js, ```npm install -g expo-cli ```
 
-  1  ```yarn```
+  1 Download the Expo Go app ([ios](https://apps.apple.com/app/apple-store/id982107779),[android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www))
 
-  2  ```yarn start```
+  2  ```yarn```
+
+  3  ```yarn start```
+  
+  4 Scan the QRCode!!!
 
 ## 🤝Acknowledgments
 This project is inspired by [30 days of React Native](https://github.com/fangwei716/30-days-of-react-native), Special thanks to the prior work by [@fangwei716](https://github.com/fangwei716)
