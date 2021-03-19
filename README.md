@@ -45,7 +45,7 @@ This project is inspired by [30 days of React Native](https://github.com/fangwei
 ## ☕ Buy me a cup of coffee
 If you think the project has helped you, you can buy a cup of coffee for the author as a sign of encouragement 👇
 ```bash
-deno run https://deno.land/x/qrcode_terminal/support/buy-me-a-cup-of-coffee.js
+npx buy-alpaca-bi-a-cup-of-coffee
 ```
 
 ## 🔑License

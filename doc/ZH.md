@@ -41,7 +41,7 @@
 ## ☕ 给我买杯咖啡  
 如果你觉得这个项目帮助了你，你可以执行下面的命令给我买杯咖啡投喂我👇
 ```bash
-deno run https://deno.land/x/qrcode_terminal/support/buy-me-a-cup-of-coffee.js
+npx buy-alpaca-bi-a-cup-of-coffee
 ```
 
 ## 🔑开源许可
